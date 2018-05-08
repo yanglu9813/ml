@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<style type="text/css">
+       
+       /* css初始化 */  /* 不管在哪个网站打开内容都不会变 */
+       div,p,h1,h2,h3,h4,h5,h6,a{
+       	font:12px 宋体;
+       	text-decoration: none;   /* a标签的下划线去掉 */
+       }
+
+       ul,dl,dd,body,h1,h2,h3,h4,h5,h6,p{
+       	margin: 0;
+       	padding: 0;
+       }
+
+       ul{
+       	list-style: none;  /* 列表的默认样式去掉 */
+       }
+
+       input{
+       	border: 0 none;        /* 表单标签没有边框 */
+       	outline-style: none;       /* 没有轮廓线 */
+
+       	margin: 0;
+       	padding: 0;
+       }
+
+        /* 头部开始 */
+
+        .header{
+        	height: 26px;
+        	border-bottom: 1px solid #F7F7F7;
+        	background-color: #F1F1F1;
+        }
+
+        .h-body{
+        	width: 980px;
+        	height: 26px;
+        	
+        	margin: 0 auto;
+        }
+
+        .title{
+        	height: 26px;
+        	line-height: 26px;
+        	color: #919191;
+        	float: left;
+        }
+
+        .nav{
+        	height: 26px;
+        	line-height: 26px;
+        	float: right;
+        }
+
+        .nav li{
+        	height: 26px;
+        	line-height: 26px;
+        	float: left;
+        	background: url("images/sj.png") no-repeat right;
+        }
+
+        .nav a{
+        	height: 26px;
+        	display: inline-block;
+        	padding: 0 8px;
+        	color: #919191;
+        }
+
+        .nav a:hover{
+        	color: #EBD90C;
+        }
+
+        /* 主体部分开始 */
+        .m-body{
+        	width: 980px;
+        	margin: 0 auto;
+        }
+
+        .serch{
+        	height: 98px;
+        	
+        	overflow: hidden;
+
+        }
+
+        .loge{
+        	width: 200px;
+        	height: 84px;
+        	margin-top: 6px;
+        	float: left;
+        }
+
+        .search{
+        	width: 528px;
+        	height: 40px;
+        	border: 1px solid #DFDFDF;
+        	float: right;
+        	margin-top: 29px;
+        }
+
+        .search .txt{
+            width: 419px;
+            height: 28px;
+            border:1px solid #CDCDCD;
+            border-right: 0 none;
+            margin:5px 0 0 4px;
+            float: left;
+        }
+
+        .search .btn{
+        	width: 99px;
+        	height: 30px;   /* 增加2px */
+        	background: url("images/serch.png");  /* 该图片有边框影响，应在height增加像素 */
+        	float: left;
+        	margin-top:5px;
+        }
+
+        /* 导航部分开始 */
+        .m-nav{
+        	height: 25px;
+        	border-bottom: 2px solid #0266A2;
+        }
+
+        .m-nav li{
+        	height: 25px;
+        	float: left;
+        }
+
+        .m-nav a{
+        	height: 25px;
+        	display: inline-block;
+        	line-height: 25px;
+        	padding: 0 10px;
+        }
+
+        .m-nav a:hover{
+        	background-color: #0266A2;
+        	color: white;
+        }
+
+       /*  banner部分开始 */
+       .banner{
+            height: 210px;
+            margin-top: 10px;
+       }
+
+       .l-banner{
+          width: 200px;
+          height: 210px;
+          float: left;
+       }
+
+       .t-banner{
+          height: 30px;
+          background-color: #0266A2;
+          color: white;
+          font-weight: 700;
+          line-height: 30px;
+          padding-left: 20px;
+       }
+
+       .l-banner ul{
+          height: 180px;
+          background-color: #EBF0F6;
+          overflow: hidden;
+       }
+
+       .l-banner li{
+          height: 27px;
+          margin-left: 9px;
+          margin-top: 11px;
+          padding-left: 30px;
+       }
+
+       .l-banner li.one{
+          background:url("images/icon_1.png") no-repeat; 
+       }
+
+       .l-banner li.two{
+          background:url("images/icon_2.png") no-repeat; 
+       }
+
+       .l-banner li.three{
+          background:url("images/icon_3.png") no-repeat; 
+       }
+
+       .l-banner li.four{
+          background:url("images/icon_4.png") no-repeat; 
+       }
+
+       .l-banner li.five{
+          background:url("images/icon_5.png") no-repeat; 
+       }
+
+       .l-banner li.six{
+          background:url("images/icon_6.png") no-repeat; 
+       }
+
+       .l-banner a{
+        color: #BBC0C6;
+
+       }
+
+       .l-banner a:hover{
+            color: #F3EB0F;
+       }
+       
+
+     /*  中间的盒子 */
+       .m-banner{
+         width: 520px;
+         height: 212px;
+         float: left;
+       }
+
+       /* 右边盒子 */
+       .r-banner{
+          height:210px; 
+          width: 230px;
+          float: right;
+       }
+
+       .rt-banner{
+        width: 229px;
+        height: 94px;
+        border: 1px solid #F3F3F5;
+       }
+
+       .rb-banner{
+        width: 234px;
+        height: 96px;
+        margin-top: 18px;
+
+       }
+
+       /* 建筑材料开始 */
+      .jzcl{
+        height: 34px;
+        background-color: #EDF2F8;
+        margin-top: 14px;
+        border-top:2px solid #D0D7DF;
+        line-height: 34px;
+        padding-left: 21px;
+        font-weight: 700;
+        font-size: 14px;
+      }
+
+      .jzcl-list{
+      /*   height: 346px; */
+        margin-top: 10px; 
+
+      }
+       
+       /* 左侧盒子 */
+
+       .l-list{
+        width: 727px;
+        height: 344px;
+        border: 1px solid #EBEBEB;
+        float: left;
+       }
+      
+      /* 上边盒子 */
+       .lt-list{
+        width: 656px;
+        height: 143px;
+        margin-top: 15px;
+        margin-left: 26px;
+       }
+
+       /* 中间横线 */
+       .hx{
+        border:1px solid #F7F7F7;
+        margin: 14px 5px;
+       }
+       
+       /* 左边盒子 */
+       .ltl-list{
+        height: 143px;
+        width: 319px;
+        float: left;
+       }
+
+       .l-list1{
+        height: 143px;
+        width: 99px;
+        float: left;
+       }
+
+       .r-list2{
+        width: 211px;
+        height: 143px;
+         float: right;
+       }
+
+       .r-list2 .p1{
+         height: 30px;
+         margin-top: 9px;
+       }
+
+       .r-list2 .p2{
+        height: 48px;
+       }
+
+       .r-list2 .p3{
+        height: 42px;
+       }
+
+       .t-list{
+        width: 97px;
+        height: 101px;
+        border: 1px solid #E9E9E9;
+        text-align: center;
+        line-height: 97px;
+       }
+
+       .t-list img{
+        vertical-align: middle;
+       }
+
+       .b-btn{
+        height: 26px;
+        width: 98px;
+        background:url("images/buy.png");
+        margin-top: 15px;
+       }
+
+
+     /* 右侧列表显示 */
+       .r-list{
+        width: 228px;
+        height: 344px;
+        border: 1px solid #F2F1F6;
+        float: right;
+       }
+
+       .r-title{
+        width: 228px;
+        height: 28px;
+        border-bottom: 1px solid #EFEFEF;
+        line-height: 28px;
+        padding-left: 30px;
+        color: #777777;
+        font-weight: 700;
+       }
+
+       .r-list ul{
+        margin-top: 18px;
+        margin-left: 10px;
+       }
+
+       .r-list li{
+        height: 25px;
+        background:url("images/li_bg.png") no-repeat left 3px;
+        padding-left: 15px;
+       }
+
+       .r-list a{
+        color: #A1A1A1;
+       }
+
+       .r-list a:hover{
+        color:#66D9EF; 
+       }
+
+       /* 清除浮动 */
+       .clearfix:after{
+        content: "";
+        height: 0;
+        line-height: 0;
+        display: block;
+        clear: both;
+        visibility:hidden;
+        }
+
+        .clearfix{
+          zoom: 1;
+        } 
+
+         /* 儿童安全座椅 */
+
+         .erbox{
+            height: 302px;
+            margin-top: 34px;
+            position: relative;
+         }
+
+         .box-left{
+            height: 302px;
+            width: 722px;
+            border: 1px solid #CACACA;
+            border-top: 2px solid #00B0E7;
+            float: left;
+         }
+
+         .dw-img{
+          position: absolute;
+          top:-23px;
+         }
+
+         .xq{
+          position: absolute;
+          right: 258px;
+          top: -14px;
+         }
+
+        /* 座椅列表 */
+         .p-div{
+          width: 163px;
+          height: 284px;
+          margin: 5px 12px 0 5px;
+          float: left;
+         }
+
+         .top-div{
+          width: 164px;
+          height: 170px;
+         }
+         .p-div p{
+          text-align: center;
+         }
+
+         .p-div .p1{
+          height: 43px;
+          margin-top: 8px;
+         }
+
+         .p-div .p2{
+          height: 22px;
+         }
+
+         .p-div .p3{
+           height: 27px;
+         }
+
+         /* 右侧盒子 */
+         .box-right{
+          float: right;
+          height: 302px;
+          width: 220px;
+         }
+
+         .r-boxtop{
+          width: 218px;
+          height: 128px;
+          border: 1px solid #CBCBCB;
+         }
+
+         .r-boxbot{
+          width: 220px;
+          height: 175px;
+          margin-top: 10px;
+         }
+
+
+	</style>
+</head>
+<body>
+	 
+	 <!-- 头部开始 -->
+	 <div class="header">
+	     <!-- 头部主体部分 -->
+	 	<div class="h-body">
+	 	     <!-- 欢迎语 -->
+	 		<div class="title">
+	 			欢迎你来到这里！
+	 		</div>
+	 		<!-- 导航部分 -->
+	 		<div class="nav">
+	 			<ul>
+	 				<li><a href="#">建材网首页</a></li>
+	 				<li><a href="#">我的商务室</a></li>
+	 				<li><a href="#">我的收藏</a></li>
+	 				<li><a href="#">建材服务</a></li>
+	 				<li><a href="#">客服中心</a></li>
+	 				<li><a href="#">网站导航</a></li>
+	 			</ul>
+	 		</div>
+	 	</div>
+	 </div>
+
+	 <!-- 主体部分开始 -->
+	 <div class="m-body">
+	   <div class="serch">
+	   <!-- loge部分开始 -->
+	 	<div class="loge">
+	 		<img src="images/1.png" >
+	 	</div>
+	 	<!-- 搜索部分开始 -->
+        <div class="search">
+        	<input type="text" value="请输入。。。" class="txt">
+        	<input type="button" class="btn">
+        </div>
+       </div>
+       <!-- 导航部分开始 -->
+       <div class="m-nav">
+       	<ul>
+       		<li><a href="#">首页</a></li>
+       		<li><a href="#">建筑材料</a></li>
+       		<li><a href="#">儿童安全座</a></li>
+       		<li><a href="#">椅工艺美术品</a></li>
+       	</ul>
+       </div>
+       
+      <!--  banner部分开始 -->
+      <div class="banner">
+        <!-- 左盒子 -->
+        <div class="l-banner">
+           <div class="t-banner">
+             商机市场
+           </div>
+           <div>
+             <ul>
+               <li class="one"><a href="#">建筑材料</a></li>
+               <li class="two"><a href="#">儿童安全坐骑</a></li>
+               <li class="three"><a href="#">工艺美术品</a></li>
+               <li class="four"><a href="#">建筑材料</a></li>
+               <li class="five"><a href="#">儿安全座椅</a></li>
+               <li class="six"><a href="#">工艺美术品</a></li>
+             </ul>
+           </div>
+        </div>
+
+       <!--  中间的盒子 -->
+       <div class="m-banner">
+         <img src="images/center.png" alt="">
+       </div>
+
+       <!-- 右边盒子 -->
+       <div class="r-banner">
+       <!-- 右上盒子 -->
+         <div class="rt-banner">
+           <img src="images/center-r.png" alt="">
+         </div>
+         <!-- 右下盒子 -->
+         <div class="rb-banner">
+           <img src="images/center-r2.png" alt="">
+         </div>
+       </div>
+      </div>
+
+      <!-- 建筑材料开始 -->
+
+      <div class="jzcl">
+        建筑材料
+      </div>
+      <div class="jzcl-list clearfix">
+
+      <!-- 左侧盒子 -->
+          <div class="l-list">
+          <!-- 上边的盒子 -->
+            <div class="lt-list">
+              
+              <!-- 上边左盒子 -->
+              <div class="ltl-list">
+                <!-- 左盒子 -->
+                <div class="l-list1">
+                  <div class="t-list">
+                    <img src="images/c1.png" alt="">
+                  </div>
+                  <div class="b-btn">
+                    <input type="button">
+                  </div>
+                </div>
+                 
+                 <!-- 右盒子 -->
+                <div class="r-list2">
+                  <p class="p1">好太太晾衣架 
+                  铝钛合金 升降双杆</p>
+                  <p class="p2">
+                    自动换挡 安全耐用
+                    <br>
+                    稳定性好 抗氧化强
+                  </p>
+                  <p class="p3">
+                    239.00 <del>￥386.00</del>
+                  </p>
+                  <p class="p4">
+                    限量99件 已售出 20件
+                  </p>
+                </div>
+              </div>
+
+                 <!-- 上边左盒子 -->
+              <div class="ltl-list">
+                <!-- 左盒子 -->
+                <div class="l-list1">
+                  <div class="t-list">
+                    <img src="images/c1.png" alt="">
+                  </div>
+                  <div class="b-btn">
+                    <input type="button">
+                  </div>
+                </div>
+                 
+                 <!-- 右盒子 -->
+                <div class="r-list2">
+                  <p class="p1">好太太晾衣架 
+                  铝钛合金 升降双杆</p>
+                  <p class="p2">
+                    自动换挡 安全耐用
+                    <br>
+                    稳定性好 抗氧化强
+                  </p>
+                  <p class="p3">
+                    239.00 <del>￥386.00</del>
+                  </p>
+                  <p class="p4">
+                    限量99件 已售出 20件
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 横线 -->
+            <div class="hx"></div>
+
+            <!-- 下边的盒子 -->
+            <div class="lt-list">
+                   <div class="lt-list">
+              
+              <!-- 上边左盒子 -->
+              <div class="ltl-list">
+                <!-- 左盒子 -->
+                <div class="l-list1">
+                  <div class="t-list">
+                    <img src="images/c1.png" alt="">
+                  </div>
+                  <div class="b-btn">
+                    <input type="button">
+                  </div>
+                </div>
+                 
+                 <!-- 右盒子 -->
+                <div class="r-list2">
+                  <p class="p1">好太太晾衣架 
+                  铝钛合金 升降双杆</p>
+                  <p class="p2">
+                    自动换挡 安全耐用
+                    <br>
+                    稳定性好 抗氧化强
+                  </p>
+                  <p class="p3">
+                    239.00 <del>￥386.00</del>
+                  </p>
+                  <p class="p4">
+                    限量99件 已售出 20件
+                  </p>
+                </div>
+              </div>
+
+                 <!-- 上边左盒子 -->
+              <div class="ltl-list">
+                <!-- 左盒子 -->
+                <div class="l-list1">
+                  <div class="t-list">
+                    <img src="images/c1.png" alt="">
+                  </div>
+                  <div class="b-btn">
+                    <input type="button">
+                  </div>
+                </div>
+                 
+                 <!-- 右盒子 -->
+                <div class="r-list2">
+                  <p class="p1">好太太晾衣架 
+                  铝钛合金 升降双杆</p>
+                  <p class="p2">
+                    自动换挡 安全耐用
+                    <br>
+                    稳定性好 抗氧化强
+                  </p>
+                  <p class="p3">
+                    239.00 <del>￥386.00</del>
+                  </p>
+                  <p class="p4">
+                    限量99件 已售出 20件
+                  </p>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+
+          <!-- 右侧盒子 -->
+          <div class="r-list">
+            <div class="r-title">
+              建材资讯
+            </div>
+        
+              <ul>
+                <li><a href="#">贵阳市4月10市场行情</a></li>
+                <li><a href="#">贵阳市4月10市场行情</a></li>
+                <li><a href="#">贵阳市4月10市场行情</a></li>
+                <li><a href="#">贵阳市4月10市场行情</a></li>
+                <li><a href="#">贵阳市4月10市场行情</a></li>
+                <li><a href="#">贵阳市4月10市场行情</a></li>
+                <li><a href="#">贵阳市4月10市场行情</a></li>
+                <li><a href="#">贵阳市4月10市场行情</a></li>
+                <li><a href="#">贵阳市4月10市场行情</a></li>
+                <li><a href="#">贵阳市4月10市场行情</a></li>
+                <li><a href="#">贵阳市4月10市场行情</a></li>
+                <li><a href="#">贵阳市4月10市场行情</a></li>
+              </ul>
+           
+          </div>
+      </div>
+
+
+      <!-- 儿童座椅列表 -->
+      <div class="jzcl">
+        儿童安全座椅
+      </div>
+
+      
+      <div class="erbox">
+        
+        <div class="dw-img">
+          <img src="images/et.png">
+        </div>
+
+        <div class="xq">
+          <a href="#">详情请点击&gt;&gt</a>
+        </div>
+        <!-- 座椅列表 -->
+        <div class="box-left">
+         
+            <div class="p-div">
+              <div class="top-div">
+                <img src="images/et01.png" alt="">
+              </div>
+                <p class="p1">
+                  英国百代适-
+                  至尊者（带ISOFIX）奔驰宝马专用
+                </p>
+                <p class="p2">
+                  适合年龄9个月-4岁
+                </p>
+                <p class="p3">
+                  市场价：<del>￥5580</del>
+                </p>
+                <p class="p4">
+                  直销价：￥3330
+                </p>
+            </div>
+            <div class="p-div">
+              <div class="top-div">
+                <img src="images/et01.png" alt="">
+              </div>
+                <p class="p1">
+                  英国百代适-
+                  至尊者（带ISOFIX）奔驰宝马专用
+                </p>
+                <p class="p2">
+                  适合年龄9个月-4岁
+                </p>
+                <p class="p3">
+                  市场价：<del>￥5580</del>
+                </p>
+                <p class="p4">
+                  直销价：￥3330
+                </p>
+            </div>
+            <div class="p-div">
+              <div class="top-div">
+                <img src="images/et01.png" alt="">
+              </div>
+                <p class="p1">
+                  英国百代适-
+                  至尊者（带ISOFIX）奔驰宝马专用
+                </p>
+                <p class="p2">
+                  适合年龄9个月-4岁
+                </p>
+                <p class="p3">
+                  市场价：<del>￥5580</del>
+                </p>
+                <p class="p4">
+                  直销价：￥3330
+                </p>
+            </div>
+            <div class="p-div">
+              <div class="top-div">
+                <img src="images/et01.png" alt="">
+              </div>
+                <p class="p1">
+                  英国百代适-
+                  至尊者（带ISOFIX）奔驰宝马专用
+                </p>
+                <p class="p2">
+                  适合年龄9个月-4岁
+                </p>
+                <p class="p3">
+                  市场价：<del>￥5580</del>
+                </p>
+                <p class="p4">
+                  直销价：￥3330
+                </p>
+            </div>
+        </div>
+      
+      <!-- 右侧盒子 -->
+      <div class="box-right">
+      <!-- 上边的盒子 -->
+        <div class="r-boxtop">
+          <img src="images/et_right.png" alt="">
+        </div>
+      <!-- 下边的盒子 -->
+        <div class="r-boxbot">
+          <img src="images/et_right_bottom.png" alt="">
+        </div>
+      </div>
+      
+    </div>
+	 </div>
+</body>
+</html>
